@@ -1,0 +1,13 @@
+This is the source code used for the SMART MIRROR project
+
+1. Before running the draw_bmp.py, make sure of the following
+	a. The device has bluetooth
+	b. Run rfcomm bind rfcomm0 <MAC address of bluetooth chip used)
+	c. compile the picsend.c with 
+		gcc -o main picsend.chip
+	d. run the program as root
+
+2. This will allow the program to start and UI will be generated, as the picture will be sent to the LCD screen on the mirror.
+
+3. font_rom.h is used by ECE385 course, all credits to them
+4. ssd1963.h and ssd1963.c is the library for interfacing the LCD at a low level, while main.c contains high level interfacing, such as draw text/ string and read picture from UART port
